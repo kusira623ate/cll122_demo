@@ -44,9 +44,8 @@ label {
 
 .input-row {
   display: flex;
-  align-items: center;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 input[type="number"],
@@ -64,10 +63,8 @@ select {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 4px;
-  padding: 0.3rem;
-  font-size: 0.9rem;
-  min-width: 60px;
-  max-width: 80px;
+  padding: 0.4rem;
+  min-width: 65px;
 }
 
 button {

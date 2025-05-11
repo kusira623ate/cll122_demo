@@ -1,24 +1,18 @@
-/* Reset and base styles */
-* {
-  box-sizing: border-box;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f7f9;
-  color: #333;
-  line-height: 1.6;
-}
-
 .container {
-  max-width: 800px;
+  max-width: 850px;
   margin: 2rem auto;
-  padding: 1rem 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background-color: #111;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #222;
 }
 
 header, footer {
@@ -26,9 +20,9 @@ header, footer {
   margin-bottom: 1.5rem;
 }
 
-header h1 {
+h1 {
   font-size: 2rem;
-  color: #2c3e50;
+  margin-bottom: 0.5rem;
 }
 
 form {
@@ -37,47 +31,73 @@ form {
 }
 
 .form-group {
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 label {
-  flex: 1;
-  margin-right: 0.5rem;
+  flex: 1.5;
   font-weight: bold;
+  margin-right: 1rem;
+  text-align: right;
 }
 
 input, select {
-  flex: 2;
   padding: 0.5rem;
-  margin-right: 0.5rem;
-  border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+input[type="number"] {
+  width: 100%;
+  max-width: 150px;
+  margin-right: 0.5rem;
+}
+
+select {
+  width: auto;
+  max-width: 80px;
 }
 
 button {
   padding: 0.75rem;
-  background: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
   font-size: 1rem;
-  margin-right: 0.5rem;
+  margin: 0.5rem 0.25rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-button:hover {
-  background: #2980b9;
+button[type="submit"] {
+  background-color: #e74c3c;
+  color: #fff;
 }
 
-.hidden {
-  display: none;
+button[type="submit"]:hover {
+  background-color: #c0392b;
+}
+
+#volume-btn, #residence-time-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+#volume-btn:hover, #residence-time-btn:hover {
+  background-color: #2980b9;
 }
 
 #results {
   margin-top: 2rem;
   padding: 1rem;
-  background: #ecf0f1;
-  border-left: 5px solid #3498db;
+  background: #222;
+  border-left: 4px solid #3498db;
+}
+
+#output {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }

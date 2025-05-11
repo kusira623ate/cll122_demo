@@ -1,10 +1,10 @@
-/* body {
+body {
   background-color: #000;
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-} */
+}
 
 body {
     background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*w6SGmEdQNMvI_V8E');
@@ -13,14 +13,14 @@ body {
     background-position: center;
   }
 
-/* .container {
+.container {
   max-width: 850px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #111;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-} */
+}
 
 header {
   text-align: center;

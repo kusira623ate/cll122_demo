@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>First-Order Reaction Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>First-Order Reaction Calculator</h1>
+      <p>Calculate conversion, reactor volume, or time for a first-order liquid-phase decomposition reaction.</p>
+    </header>
+
+    <main>
+      <form id="reaction-form">
+        <div class="form-group">
+          <label for="k">Rate Constant (k) [1/s]</label>
+          <input type="number" id="k" name="k" step="any" required />
+        </div>
+
+        <div class="form-group">
+          <label for="v0">Volumetric Flow Rate (v₀) [m³/s]</label>
+          <input type="number" id="v0" name="v0" step="any" required />
+        </div>
+
+        <div class="form-group">
+          <label for="X">Conversion (X)</label>
+          <input type="number" id="X" name="X" step="any" min="0" max="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reactor-type">Reactor Type</label>
+          <select id="reactor-type" name="reactor-type" required>
+            <option value="PFR">Plug Flow Reactor (PFR)</option>
+            <option value="CSTR">Continuous Stirred Tank Reactor (CSTR)</option>
+            <!-- <option value="Batch">Batch Reactor</option> -->
+          </select>
+        </div>
+
+        <button type="submit">Calculate</button>
+      </form>
+
+      <section id="results" class="hidden">
+        <h2>Results</h2>
+        <p id="output"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Chemical Engineering Department</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

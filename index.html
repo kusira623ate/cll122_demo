@@ -10,32 +10,63 @@
   <div class="container">
     <header>
       <h1>First-Order Reaction Calculator</h1>
-      <p>Calculate conversion, reactor volume, or time for a first-order liquid-phase decomposition reaction.</p>
+      <p>Calculate reactor volume and residence time for a first-order liquid-phase decomposition reaction.</p>
     </header>
 
     <main>
       <form id="reaction-form">
         <div class="form-group">
-          <label for="k">Rate Constant (k) [1/s]</label>
-          <input type="number" id="k" name="k" step="any" required />
-        </div>
-
-        <div class="form-group">
-          <label for="v0">Volumetric Flow Rate (v₀) [m³/s]</label>
-          <input type="number" id="v0" name="v0" step="any" required />
-        </div>
-
-        <div class="form-group">
-          <label for="X">Conversion (X)</label>
-          <input type="number" id="X" name="X" step="any" min="0" max="1" required />
-        </div>
-
-        <div class="form-group">
-          <label for="reactor-type">Reactor Type</label>
+          <label for="reactor-type">Type of Reactor:</label>
           <select id="reactor-type" name="reactor-type" required>
             <option value="PFR">Plug Flow Reactor (PFR)</option>
             <option value="CSTR">Continuous Stirred Tank Reactor (CSTR)</option>
-            <!-- <option value="Batch">Batch Reactor</option> -->
+<!--             <option value="Batch">Batch Reactor</option> -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="temperature">Temperature (T):</label>
+          <input type="number" id="temperature" name="temperature" step="any" required />
+          <select id="temperature-unit">
+            <option value="K">K</option>
+            <option value="°C">°C</option>
+            <option value="°F">°F</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pressure">Pressure (P):</label>
+          <input type="number" id="pressure" name="pressure" step="any" required />
+          <select id="pressure-unit">
+            <option value="atm">atm</option>
+            <option value="Pa">Pa</option>
+            <option value="bar">bar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="k">Rate Constant (k):</label>
+          <input type="number" id="k" name="k" step="any" required />
+          <select id="k-unit">
+            <option value="1/s">1/s</option>
+            <option value="1/min">1/min</option>
+            <option value="1/hr">1/hr</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="X">Conversion (X):</label>
+          <input type="number" id="X" name="X" step="any" min="0" max="100" required />
+          <span>%</span>
+        </div>
+
+        <div class="form-group">
+          <label for="v0">Volumetric Flow Rate (v<sub>0</sub>):</label>
+          <input type="number" id="v0" name="v0" step="any" required />
+          <select id="v0-unit">
+            <option value="m³/s">m³/s</option>
+            <option value="L/s">L/s</option>
+            <option value="L/min">L/min</option>
           </select>
         </div>
 
@@ -44,6 +75,8 @@
 
       <section id="results" class="hidden">
         <h2>Results</h2>
+        <button id="volume-btn">Volume of Reactor Required</button>
+        <button id="residence-time-btn">Residence Time (τ)</button>
         <p id="output"></p>
       </section>
     </main>

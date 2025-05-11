@@ -1,83 +1,40 @@
-/* Reset and base styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f7f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-header, footer {
-  text-align: center;
+.form-group {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1.5rem;
 }
 
-header h1 {
-  font-size: 2rem;
-  color: #2c3e50;
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 1rem;
+.input-row {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
-label {
-  flex: 1;
-  margin-right: 0.5rem;
-  font-weight: bold;
-}
-
-input, select {
-  flex: 2;
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 0.75rem;
-  background: #3498db;
+input[type="number"],
+input[type="text"] {
+  background-color: #000;
   color: #fff;
-  border: none;
+  border: 1px solid #fff;
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-right: 0.5rem;
+  padding: 0.5rem;
+  width: 200px; /* Adjust width as needed */
+  box-sizing: border-box;
 }
 
-button:hover {
-  background: #2980b9;
-}
-
-.hidden {
-  display: none;
-}
-
-#results {
-  margin-top: 2rem;
-  padding: 1rem;
-  background: #ecf0f1;
-  border-left: 5px solid #3498db;
+select {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  width: auto;
+  min-width: 60px;
+  max-width: 100px;
+  box-sizing: border-box;
 }
